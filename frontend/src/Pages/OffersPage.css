@@ -1,0 +1,129 @@
+.offers-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 20px 0;
+}
+
+.offers-page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.offers-subtitle {
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.offers-page-header h1 {
+  color: var(--text-primary);
+  font-size: clamp(2.5rem, 2.2vw, 3.5rem);
+  margin: 0;
+}
+
+.offers-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 720px;
+  line-height: 1.75;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.offers-card {
+  position: relative;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.offers-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.offers-card-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.offers-card-image {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+}
+
+.offers-card-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.offers-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.offers-card-name {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.offers-card-prices {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.offers-price-new {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.offers-price-old {
+  color: var(--text-tertiary);
+  text-decoration: line-through;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .offers-page {
+    width: 95%;
+    margin-top: 24px;
+  }
+
+  .offers-page-header {
+    gap: 12px;
+  }
+
+  .offers-description {
+    font-size: 0.95rem;
+  }
+}
